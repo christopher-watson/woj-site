@@ -4,7 +4,7 @@ import SocialCTA from "./SocialCTA"
 
 class Social extends Component {
   render() {
-    const socialItems = socialMedia.map((item, index) => (
+    const socialItems = socialMedia.media.map((item, index) => (
       <div key={index} className="social-item">
         <SocialCTA
           image={item.image}
@@ -15,7 +15,12 @@ class Social extends Component {
         />
       </div>
     ))
-    return <div id="social">{socialItems}</div>
+    return (
+      <div id="social">
+        <div className="section-title">{socialMedia.title}</div>
+        <div className="social-content">{socialItems}</div>
+      </div>
+    )
   }
 }
 

@@ -15,6 +15,7 @@
   --black: #252525;
   --lightBlack: #323232;
   --lightGrey: #5D5D5D55;
+  --grey: #C9C9C9;
   --clear: #f7f7f700;
 }
 
@@ -76,7 +77,7 @@ html {
   z-index: -1;
 }
 
-.quote-logo>img{
+.quote-logo>img {
   width: 100%;
 }
 
@@ -244,6 +245,30 @@ nav {
 /* --------------------------------------------------------- ALUMNI */
 
 /* --------------------------------------------------------- SOCIAL */
+#social {
+  display: flex;
+  padding: 50px 60px;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+
+.social-content {
+  display: grid;
+  grid-gap: 10px 20px;
+  grid-template-columns: repeat(auto-fit, 400px);
+  justify-content: center;
+}
+
+.hover-social:hover {
+  background: var(--grey) !important;
+}
+
+@media only screen and (max-width: 1390px) {
+  .social-content {
+    grid-template-columns: 400px;
+  }
+}
 
 /* --------------------------------------------------------- CONTACT */
 
