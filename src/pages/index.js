@@ -1,18 +1,44 @@
 import React from "react"
-import "../style.css"
-import Appbar from "../components/appbar"
-import Info from "../components/info"
 import { Helmet } from "react-helmet"
+import Navbar from "../components/Navbar"
+import Home from "../components/Home"
+import Quote from "../components/Quote"
+import Image from "../components/Image"
+import About from "../components/About"
+import Trainers from "../components/Trainers"
+import Camps from "../components/Camps"
+import Alumni from "../components/Alumni"
+import Social from "../components/Social"
+import Contact from "../components/Contact"
+import Footer from "../components/Footer"
+import lebron from '../images/banner.jpg'
+import "../style.css"
 
 function index() {
   return (
-    <div>
-      <Appbar />
-      <Info />
+    <div id="index">
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Home | Sumanth</title>
+        <title>Clutch Sports</title>
       </Helmet>
+      <Navbar />
+      <Home />
+      <div id="breakpoint"></div>
+      <Quote by="Michael Jordan" right>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, possimus!
+      </Quote>
+      <Image src={lebron} alt='Lebron James'/>
+      <About/>
+      <Quote by="Michael Jordan" right>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, possimus!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, possimus!
+      </Quote>
+      <Trainers />
+      <Camps/>
+      <Alumni/>
+      <Social/>
+      <Contact/>
+      <Footer/>
     </div>
   )
 }

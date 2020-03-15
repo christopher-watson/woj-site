@@ -1,61 +1,278 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins|Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Francois+One|Caveat|Montserrat|Yesteryear&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
 
+/* TEST BUFFER REMOVE LATER */
+.buffer {
+  padding: 50px 0;
+  border-top: 1px solid red;
+  border-bottom: 1px solid red;
+}
+
+/* --------------------------------------------------------- GLOBAL STYLING */
+/* Root Site Colors */
+:root {
+  --white: #f7f7f7;
+  --black: #252525;
+  --lightBlack: #323232;
+  --lightGrey: #5D5D5D55;
+  --clear: #f7f7f700;
+}
+
+/* Global Style Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global Font */
 html {
-  background-color: #1f2b3b !important;
-  color: #fff !important;
-  /* font-size: 2em; */
-  font-family: "Poppins", sans-serif !important;
+  font-family: Helvetica, Arial, sans-serif;
+  color: var(--black);
 }
 
-body {
-  background-color: #1f2b3b !important;
-  color: #fff !important;
-  font-size: 20px !important;
-  font-family: "Poppins", sans-serif !important;
+/* Global Grid */
+#index {
+  display: grid;
+  grid-auto-rows: min-content;
 }
 
-.code {
-  font-family: "Source Code Pro", monospace;
+/* Global "Anchors" */
+.anchor:hover {
+  cursor: pointer;
 }
 
-.info {
-  line-height: 1.4;
-  width: 85%;
+/* Quote Styling */
+.quote {
+  position: relative;
+  background: var(--lightGrey);
+  padding: 60px 150px;
+  font-family: 'Caveat', cursive;
+  font-size: 3.3rem;
 }
 
-.social {
+.quote-by {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  margin-left: 20px;
+}
+
+.quote-right {
+  text-align: right;
+}
+
+.quotations {
+  font-family: 'Yesteryear', serif;
+  font-size: 3rem;
+}
+
+.quote-logo {
+  position: absolute;
+  width: 200px;
+  opacity: .2;
+  margin: 20px 40px;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.quote-logo>img{
+  width: 100%;
+}
+
+/* Jumbo Image Styling */
+.jumbo-image {
+  width: 100vw;
+  height: 50vh;
+}
+
+.jumbo-image>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Section Titles */
+.section-title {
+  font-family: 'Francois One', Helvetica, sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 20px;
+  text-decoration: underline;
+}
+
+/* Global Social Media Icon Styling */
+#icons {
+  font-size: 2.5rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white !important;
+  flex-direction: row;
 }
 
 .icon {
-  height: 30px;
-  transition: 0.1s ease-in;
-  color: #fff;
+  padding: 0 10px;
 }
 
-.icon:hover {
-  transform: scale(1.5);
-  color: #ff8a00;
+.icon a {
+  color: var(--black);
 }
 
-.card {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  transition: 0.1s ease-in;
-  background-color: #324359 !important;
+.icon a:hover {
+  color: var(--lightGrey) !important;
 }
 
-.card p {
-  font-size: 0.7em;
-  color: #ccc !important;
+/* --------------------------------------------------------- NAVBAR */
+nav {
+  position: fixed;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-areas: 'logo nav-items';
+  height: 40px;
+  width: 100vw;
+  align-items: center;
+  z-index: 1;
+  transition: background .6s ease;
 }
 
-.card a {
-  font-size: 0.7em;
+.logo-title {
+  display: flex;
+  flex-direction: row;
+  padding: 0 20px;
+  color: var(--white);
+  align-items: center;
 }
 
-.card:hover {
-  transform: scale(1.09);
+.logo>img {
+  width: 25px;
+  margin-left: 10px;
+}
+
+.nav-item-container {
+  display: flex;
+  padding: 0 20px;
+  justify-content: right;
+}
+
+.nav-item {
+  color: var(--white);
+  padding: 0 10px;
+}
+
+.nav-item:hover {
+  text-decoration: underline 2px;
+}
+
+/* --------------------------------------------------------- HOME */
+#home {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: var(--black);
+}
+
+.bg-image {
+  height: 100vh;
+  width: 100vw;
+}
+
+.bg-image>img {
+  width: 100%;
+  height: 100%;
+  background: var(--black);
+  object-fit: cover;
+  opacity: .2;
+}
+
+.home-content-div {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-text {
+  color: var(--white);
+  font-family: 'Francois One', Helvetica, sans-serif;
+  font-size: 3.4rem;
+  /* border-top: 2px solid var(--white); */
+  /* border-bottom: 2px solid var(--white); */
+  width: 35%;
+  text-align: center;
+  padding: 20px 0;
+  letter-spacing: 2px;
+  transition: all 1s ease;
+}
+
+.home-content-div button {
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin: 10px 10px 0 10px;
+  border: 2px solid var(--lightBlack);
+}
+
+.home-content-div button:hover {
+  cursor: pointer;
+  border: 2px solid var(--white);
+}
+
+/* --------------------------------------------------------- ABOUT */
+#about {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  padding: 50px 0;
+}
+
+.about-content {
+  padding: 0 150px;
+}
+
+.about-icons {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* --------------------------------------------------------- TRAINERS */
+
+/* --------------------------------------------------------- CAMPS */
+
+/* --------------------------------------------------------- ALUMNI */
+
+/* --------------------------------------------------------- SOCIAL */
+
+/* --------------------------------------------------------- CONTACT */
+
+/* --------------------------------------------------------- FOOTER */
+footer {
+  background: var(--black);
+  color: var(--white);
+  display: grid;
+  grid-auto-rows: auto;
+  width: 100%;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.copyright {
+  display: grid;
+  grid-auto-rows: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.copyright span {
+  padding-top: 5px;
+}
+
+.copyright a {
+  color: var(--white);
+}
+
+.copyright a:hover {
+  color: var(--lightGrey);
 }
