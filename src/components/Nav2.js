@@ -1,15 +1,15 @@
 import React, { Component } from "react"
 import logo from "../images/gatsby-icon.png"
 
-class Navbar extends Component {
+class Nav2 extends Component {
   state = {
     navBg: false,
-    // navOpen: true,
+    navOpen: true,
   }
 
   componentDidMount() {
     window.addEventListener("scroll", () => this.handleNavShowHide())
-    // this.toggleNavbar();
+    this.toggleNavbar()
   }
 
   handleNavShowHide = () => {
@@ -22,7 +22,7 @@ class Navbar extends Component {
       // if top of rectangle is 0
       // meaning if the distance from the
       // top of the viewport is 0
-      // then set nav bg to true
+      // then set nag bg to true
       // else false
       if (rect.top <= 0) {
         this.setState({
@@ -33,7 +33,7 @@ class Navbar extends Component {
           navBg: false,
         })
       }
-    } 
+    }
   }
 
   handleArrowClick = dest => {
@@ -44,28 +44,37 @@ class Navbar extends Component {
 
   toggleNavbar = () => {
     // console.log('toggle nav');
-    let nav = document.querySelector('.nav');
-    let burger = document.querySelector('#burger-toggle');
+    let nav = document.querySelector("nav")
+    let burger = document.querySelector("#burger-toggle")
     this.setState({
-      navOpen: !this.state.navOpen
-    });
+      navOpen: !this.state.navOpen,
+    })
     // console.log(this.state.navOpen);
     this.state.navOpen
-      ? (nav.className += ' hide-nav')
-      : (nav.className = 'nav');
+      ? (nav.className += " hide-nav")
+      : (nav.className = "nav")
     this.state.navOpen
-      ? (burger.className = '')
-      : (burger.className += 'active');
-  };
+      ? (burger.className = "")
+      : (burger.className += "active")
+  }
 
   render() {
     return (
       <nav
-        // className="nav"
+        className="nav"
         style={Object.assign(
-          this.state.navBg ? { background: "var(--black)" } : { background: "var(--clear)" } 
+          this.state.navBg
+            ? { background: "var(--black)" }
+            : { background: "var(--clear)" }
         )}
       >
+        <div className="hamburger" onClick={() => this.toggleNavbar()}>
+          <div className="lines">
+            <div id="burger-toggle">
+              <span></span>
+            </div>
+          </div>
+        </div>
         <div
           className="logo-title anchor"
           onClick={() => this.handleArrowClick("#home")}
@@ -128,4 +137,4 @@ class Navbar extends Component {
   }
 }
 
-export default Navbar
+export default Nav2

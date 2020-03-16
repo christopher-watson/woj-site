@@ -15,6 +15,7 @@
   --black: #252525;
   --lightBlack: #323232;
   --lightGrey: #5D5D5D55;
+  --grey: #C9C9C9;
   --clear: #f7f7f700;
 }
 
@@ -76,7 +77,7 @@ html {
   z-index: -1;
 }
 
-.quote-logo>img{
+.quote-logo>img {
   width: 100%;
 }
 
@@ -120,8 +121,23 @@ html {
   color: var(--lightGrey) !important;
 }
 
+@media only screen and (max-width:500px) {
+  .quote {
+    padding: 60px 50px;
+    font-size: 2.4rem;
+  }
+
+  .quote-by {
+    font-size: 1.2rem;
+  }
+
+  .quotations {
+    font-size: 2rem;
+  }
+}
+
 /* --------------------------------------------------------- NAVBAR */
-nav {
+.nav {
   position: fixed;
   display: grid;
   grid-template-columns: 300px 1fr;
@@ -161,6 +177,141 @@ nav {
   text-decoration: underline 2px;
 }
 
+.hamburger {
+  display: none;
+
+}
+
+
+
+@media only screen and (max-width:1100px) {
+  .nav {
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 50px 1fr;
+    grid-template-areas:
+      '.'
+      'logo'
+      'nav-items';
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+
+    transition: all .6s ease;
+    background: var(--black) !important;
+  }
+
+  .hide-nav {
+    height: 0 !important;
+    transition: all 1s ease;
+    /* border-top: 0 !important; */
+    overflow: hidden;
+  }
+
+  .nav .anchor {
+    opacity: 1;
+    transition: all 1s ease;
+  }
+  
+  .hide-nav .anchor {
+    opacity: 0;
+    transition: all .5s ease;
+  }
+
+  .logo-title {
+    justify-content: center;
+  }
+
+  .nav-item-container {
+    /* display: flex; */
+    /* padding: 0 20px; */
+    /* justify-content: right; */
+    flex-direction: column;
+  }
+
+  .nav-item {
+    /* color: var(--white); */
+    /* padding: 0 10px; */
+    padding: 10px 0;
+  }
+
+  .hamburger {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    top: 0;
+    justify-content: right;
+    left: -100px;
+    z-index: 2;
+    height: 40px;
+  }
+
+  .lines {
+    position: fixed;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+    z-index: 3;
+  }
+
+  .line {
+    width: 30px;
+    height: 3px;
+    background: var(--white);
+    margin: 5px;
+  }
+  
+  
+  
+  /* BURGER ------------------------ */
+  #burger-toggle span,
+  #burger-toggle span:before,
+  #burger-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: var(--lightBlack);
+    position: absolute;
+    display: block;
+    content: '';
+  }
+
+  #burger-toggle span:before {
+    top: -10px;
+  }
+
+  #burger-toggle span:after {
+    bottom: -10px;
+  }
+
+  #burger-toggle span,
+  #burger-toggle span:before,
+  #burger-toggle span:after {
+    transition: all 500ms ease-in-out;
+  }
+
+  #burger-toggle.active span {
+    background-color: transparent;
+  }
+
+  #burger-toggle.active span:before,
+  #burger-toggle.active span:after {
+    top: 0;
+  }
+
+  #burger-toggle.active span:before {
+    transform: rotate(45deg);
+  }
+
+  #burger-toggle.active span:after {
+    transform: rotate(-45deg);
+  }
+
+}
+
 /* --------------------------------------------------------- HOME */
 #home {
   display: flex;
@@ -197,9 +348,7 @@ nav {
   color: var(--white);
   font-family: 'Francois One', Helvetica, sans-serif;
   font-size: 3.4rem;
-  /* border-top: 2px solid var(--white); */
-  /* border-bottom: 2px solid var(--white); */
-  width: 35%;
+  width: 450px;
   text-align: center;
   padding: 20px 0;
   letter-spacing: 2px;
@@ -219,10 +368,21 @@ nav {
   border: 2px solid var(--white);
 }
 
+@media only screen and (max-width:500px) {
+  .home-text {
+    font-size: 2.7rem;
+  }
+
+  .home-content-div button {
+    font-size: .7rem;
+  }
+}
+
 /* --------------------------------------------------------- ABOUT */
 #about {
   display: grid;
   grid-template-rows: min-content 1fr;
+  text-align: justify;
   padding: 50px 0;
 }
 
@@ -237,6 +397,12 @@ nav {
   margin-top: 20px;
 }
 
+@media only screen and (max-width:500px) {
+  .about-content {
+    padding: 0 50px;
+  }
+}
+
 /* --------------------------------------------------------- TRAINERS */
 
 /* --------------------------------------------------------- CAMPS */
@@ -244,6 +410,35 @@ nav {
 /* --------------------------------------------------------- ALUMNI */
 
 /* --------------------------------------------------------- SOCIAL */
+#social {
+  display: flex;
+  padding: 50px 60px;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+
+.social-content {
+  display: grid;
+  grid-gap: 10px 20px;
+  grid-template-columns: repeat(auto-fit, 400px);
+  justify-content: center;
+}
+
+.hover-social:hover {
+  background: var(--grey) !important;
+}
+
+@media only screen and (max-width: 1390px) {
+  #social {
+    padding: 50px 10px;
+  }
+
+  .social-content {
+    grid-gap: 10px 20px;
+    grid-template-columns: 350px;
+  }
+}
 
 /* --------------------------------------------------------- CONTACT */
 
