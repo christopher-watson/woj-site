@@ -4,7 +4,7 @@ import logo from "../images/gatsby-icon.png"
 class Nav2 extends Component {
   state = {
     navBg: false,
-    navOpen: true,
+    navOpen: false,
   }
 
   componentDidMount() {
@@ -50,11 +50,11 @@ class Nav2 extends Component {
       navOpen: !this.state.navOpen,
     })
     this.state.navOpen
-      ? (nav.className += " hide-nav")
-      : (nav.className = "nav")
+      ? (nav.className = "nav")
+      : (nav.className += " hide-nav")
     this.state.navOpen
-      ? (burger.className = "")
-      : (burger.className += "active")
+      ? (burger.className += "active")
+      : (burger.className = "")
   }
 
   render() {
