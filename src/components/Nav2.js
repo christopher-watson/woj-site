@@ -40,16 +40,15 @@ class Nav2 extends Component {
     document.querySelector(dest).scrollIntoView({
       behavior: "smooth",
     })
+    this.toggleNavbar()
   }
 
   toggleNavbar = () => {
-    // console.log('toggle nav');
     let nav = document.querySelector("nav")
     let burger = document.querySelector("#burger-toggle")
     this.setState({
       navOpen: !this.state.navOpen,
     })
-    // console.log(this.state.navOpen);
     this.state.navOpen
       ? (nav.className += " hide-nav")
       : (nav.className = "nav")
@@ -60,79 +59,77 @@ class Nav2 extends Component {
 
   render() {
     return (
-      <nav
-        className="nav"
-        style={Object.assign(
-          this.state.navBg
-            ? { background: "var(--black)" }
-            : { background: "var(--clear)" }
-        )}
-      >
+      <div className="nav-container">
         <div className="hamburger" onClick={() => this.toggleNavbar()}>
-          <div className="lines">
-            <div id="burger-toggle">
-              <span></span>
-            </div>
-          </div>
+          <span id="burger-toggle"></span>
         </div>
-        <div
-          className="logo-title anchor"
-          onClick={() => this.handleArrowClick("#home")}
+        <nav
+          className="nav"
+          style={Object.assign(
+            this.state.navBg
+              ? { background: "var(--black)" }
+              : { background: "var(--clear)" }
+          )}
         >
-          <div className="title">Clutch Sports LLC</div>
-          <div className="logo anchor">
-            <img
-              src={logo}
-              alt="Clutch Sports Logo"
-              onClick={() => this.handleArrowClick("#home")}
-            />
-          </div>
-        </div>
-        <div className="nav-item-container">
           <div
-            className="nav-item anchor"
+            className="logo-title anchor"
             onClick={() => this.handleArrowClick("#home")}
           >
-            Home
+            <div className="title">Clutch Sports LLC</div>
+            <div className="logo anchor">
+              <img
+                src={logo}
+                alt="Clutch Sports Logo"
+                onClick={() => this.handleArrowClick("#home")}
+              />
+            </div>
           </div>
-          <div
-            className="nav-item anchor"
-            onClick={() => this.handleArrowClick("#about")}
-          >
-            About
+          <div className="nav-item-container">
+            <div
+              className="nav-item anchor"
+              onClick={() => this.handleArrowClick("#home")}
+            >
+              Home
+            </div>
+            <div
+              className="nav-item anchor"
+              onClick={() => this.handleArrowClick("#about")}
+            >
+              About
+            </div>
+            <div
+              className="nav-item anchor"
+              onClick={() => this.handleArrowClick("#trainers")}
+            >
+              Trainers
+            </div>
+            <div
+              className="nav-item anchor"
+              onClick={() => this.handleArrowClick("#camps")}
+            >
+              Camps
+            </div>
+            <div
+              className="nav-item anchor"
+              onClick={() => this.handleArrowClick("#alumni")}
+            >
+              Alumni
+            </div>
+            <div
+              className="nav-item anchor"
+              onClick={() => this.handleArrowClick("#social")}
+            >
+              Social
+            </div>
+            <div
+              className="nav-item anchor"
+              onClick={() => this.handleArrowClick("#contact")}
+            >
+              Contact
+            </div>
           </div>
-          <div
-            className="nav-item anchor"
-            onClick={() => this.handleArrowClick("#trainers")}
-          >
-            Trainers
-          </div>
-          <div
-            className="nav-item anchor"
-            onClick={() => this.handleArrowClick("#camps")}
-          >
-            Camps
-          </div>
-          <div
-            className="nav-item anchor"
-            onClick={() => this.handleArrowClick("#alumni")}
-          >
-            Alumni
-          </div>
-          <div
-            className="nav-item anchor"
-            onClick={() => this.handleArrowClick("#social")}
-          >
-            Social
-          </div>
-          <div
-            className="nav-item anchor"
-            onClick={() => this.handleArrowClick("#contact")}
-          >
-            Contact
-          </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     )
   }
 }

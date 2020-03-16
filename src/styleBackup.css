@@ -165,8 +165,7 @@ html {
 .nav-item-container {
   display: flex;
   padding: 0 20px;
-  justify-self: right;
-  /* safari */
+  justify-self: right; /* safari */
   justify-content: right;
   right: 0;
 }
@@ -210,12 +209,12 @@ html {
   }
 
   .nav .anchor {
-    /* opacity: 1; */
+    opacity: 1;
     transition: all 1s ease;
   }
-
+  
   .hide-nav .anchor {
-    /* opacity: 0; */
+    opacity: 0;
     transition: all .5s ease;
   }
 
@@ -233,65 +232,80 @@ html {
   }
 
   .hamburger {
-    position: fixed;
-    display: grid;
+    position: absolute;
+    cursor: pointer;
+    display: flex;
     width: 100%;
+    top: 0;
     justify-content: right;
-    padding: 30px 30px 0 0;
+    left: -100px;
     z-index: 2;
-    color: white;
+    height: 40px;
+  }
+
+  .lines {
+    position: fixed;
+    /* background: var(--white); */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    margin-top: 40px;
+    /* z-index: 3; */
+    /* width: 30px; */
   }
   
-  .hamburger span {
-    cursor: pointer;
-    display: grid;
-    width: 100%;
-    right: 0;
-    margin: 30px 30px 0 0;
+  .line {
+    /* width: 30px; */
+    /* height: 3px; */
+    background: var(--white);
+    /* margin: 5px; */
   }
-
+  
+  
+  
   /* Hamburger Style */
-
-  #burger-toggle,
-  #burger-toggle:before,
-  #burger-toggle:after {
+  #burger-toggle span,
+  #burger-toggle span:before,
+  #burger-toggle span:after {
     position: absolute;
     cursor: pointer;
     border-radius: 1px;
     height: 5px;
     width: 35px;
     background: var(--lightBlack);
+    background: green;
+    display: block;
     content: '';
   }
-
-  #burger-toggle:before {
-    top: 10px;
+  
+  #burger-toggle span:before {
+    top: -10px;
   }
-
-  #burger-toggle:after {
-    bottom: -20px;
+  
+  #burger-toggle span:after {
+    bottom: -10px;
   }
-
-  #burger-toggle,
-  #burger-toggle:before,
-  #burger-toggle:after {
+  
+  #burger-toggle span,
+  #burger-toggle span:before,
+  #burger-toggle span:after {
     transition: all 500ms ease-in-out;
   }
-
-  #burger-toggle.active {
+  
+  #burger-toggle.active span {
     background-color: transparent;
   }
 
-  #burger-toggle.active:before,
-  #burger-toggle.active:after {
-    top: 10px;
+  #burger-toggle.active span:before,
+  #burger-toggle.active span:after {
+    top: 0;
   }
 
-  #burger-toggle.active:before {
+  #burger-toggle.active span:before {
     transform: rotate(45deg);
   }
 
-  #burger-toggle.active:after {
+  #burger-toggle.active span:after {
     transform: rotate(-45deg);
   }
 

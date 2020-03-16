@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-// import Navbar from "../components/Navbar"
-import Nav2 from "../components/Nav2"
+import Navbar from "../components/Navbar"
+// import Nav2 from "../components/Nav2"
 import Home from "../components/Home"
 import Quote from "../components/Quote"
 import Image from "../components/Image"
@@ -22,8 +22,8 @@ function index() {
         <meta charSet="utf-8" />
         <title>Clutch Sports</title>
       </Helmet>
-      {/* <Navbar /> */}
-      <Nav2 />
+      <Navbar />
+      {/* <Nav2 /> */}
       <Home />
       <div id="breakpoint"></div>
       <Quote by="Michael Jordan" right>
