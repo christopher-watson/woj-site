@@ -5,7 +5,7 @@ const styles = {
     display: "grid",
     gridTemplateColumns: "1fr 2fr",
     gridTemplateAreas: "img handle",
-    width: "400px",
+    width: "350px",
     border: "5px solid #323232",
     borderRadius: "15px",
     margin: "5px 0",
@@ -35,16 +35,17 @@ const SocialCTA = props => {
         className='hover-social'
         style={{
           display: "flex",
+          flexDirection: 'column',
           alignItems: "center",
-          justifyContent: "space-around",
+          justifyContent: 'center',
+          lineHeight: '25px',
           textAlign: "center",
           backgroundColor: "var(--white)",
           borderRadius: "0 8px 8px 0",
-          padding: "0 1rem",
+          padding: "0 .5rem",
           fontWeight: "bold",
           textDecoration: "none",
           color: "var(--black)",
-          fontWeight: "bold",
         }}
         href={props.link}
         target="_blank"
