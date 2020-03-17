@@ -47,7 +47,7 @@ html {
 .quote {
   position: relative;
   background: var(--lightGrey);
-  padding: 60px 150px;
+  padding: 75px 150px;
   font-family: 'Caveat', cursive;
   font-size: 3.3rem;
 }
@@ -241,7 +241,7 @@ html {
     z-index: 2;
     color: white;
   }
-  
+
   .hamburger span {
     cursor: pointer;
     display: grid;
@@ -389,7 +389,164 @@ html {
   }
 }
 
-/* --------------------------------------------------------- TRAINERS */
+/* --------------------------------------------------------- COACHES */
+/* Coach Section Style */
+#coaches {
+  padding: 50px 100px;
+}
+
+.coaches-content {
+  display: grid;
+  padding: 20px 0;
+  grid-gap: 40px 20px;
+  grid-template-columns: repeat(auto-fit, 530px);
+  justify-content: center;
+}
+
+/* Coach Card Style */
+.coach-card {
+  display: grid;
+  grid-template-areas:
+    'photo name-bio'
+    'accolades accolades';
+  grid-template-rows: repeat(2, auto);
+  width: 500px;
+  border-radius: 25px;
+  box-shadow: 15px 20px 50px var(--lightGrey);
+  padding: 30px 20px;
+}
+
+.coach-image {
+  grid-area: photo;
+  width: 200px;
+  height: 200px;
+  margin-top: -50px;
+  margin-left: -50px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--black);
+}
+
+.coach-name-bio {
+  grid-area: name-bio;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  padding: 0 30px;
+  text-align: justify;
+}
+
+.coach-accolades {
+  grid-area: accolades;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  height: 100%;
+  justify-content: end;
+  padding: 0 30px 0 50px;
+}
+
+.coach-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 5px;
+}
+
+.accolades-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.accolade-item {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  margin: 2px 0;
+}
+
+.accolade-item-text {
+  margin-left: 5px;
+}
+
+@media only screen and (max-width: 1830px) {
+  .coaches-content {
+    grid-template-columns: 600px;
+  }
+
+  .coach-item {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+}
+
+
+@media only screen and (max-width:1100px) {
+  #coaches {
+    padding: 50px 10px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .coaches-content {
+    padding: 20px 0;
+    grid-gap: 40px 0;
+    grid-template-columns: min-content;
+  }
+
+  .coach-card {
+    display: grid;
+    grid-template-areas:
+      'photo'
+      'name-bio'
+      'accolades';
+    grid-template-rows: repeat(3, auto);
+    width: 300px;
+    /* border-radius: 25px; */
+    /* box-shadow: 15px 20px 50px var(--lightGrey); */
+    padding: 30px 20px;
+    justify-content: center;
+  }
+
+  .coach-image {
+    width: 150px;
+    height: 150px;
+    margin-left: 0;
+    justify-self: center;
+  }
+
+  .coach-name-bio {
+    padding: 10px;
+  }
+
+  .coach-title {
+    margin-top: 5px;
+    text-align: center;
+  }
+
+  .coach-accolades {
+    /* grid-area: accolades; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* margin-top: 5px; */
+    /* height: 100%; */
+    justify-content: end;
+    padding: 0 30px 0 50px;
+    padding: 0;
+  }
+
+  .accolade-item {
+    /* display: flex; */
+    /* height: 100%; */
+    align-items: left;
+    font-size: 1rem;
+  }
+}
 
 /* --------------------------------------------------------- CAMPS */
 
