@@ -99,9 +99,9 @@ class Nav2 extends Component {
             </div>
             <div
               className="nav-item anchor"
-              onClick={() => this.handleArrowClick("#trainers")}
+              onClick={() => this.handleArrowClick("#coaches")}
             >
-              Trainers
+              Coaches
             </div>
             <div
               className="nav-item anchor"
