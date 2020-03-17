@@ -17,8 +17,8 @@ class Home extends Component {
         <div className="home-content-div">
           <div className="home-text">Clutch Sports NJ</div>
           <div className="home-cta-div">
-            <button onClick={() => this.handleArrowClick("#trainers")}>
-              Meet the Trainers
+            <button onClick={() => this.handleArrowClick("#coaches")}>
+              Meet the Coaches
             </button>
             <button onClick={() => this.handleArrowClick("#camps")}>
               Sign Up for a Camp
