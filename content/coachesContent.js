@@ -5,7 +5,6 @@ export const coaches = {
     {
       name: "John Wojcik",
       bio: "The greatest coach in the world. Potenti eget taciti platea montes praesent ante tristique euismod lobortis",
-      image: '../src/images/woj.jpg',
       accolades: [
         "COTY",
         "NJ DIV 3 CHAMP",
