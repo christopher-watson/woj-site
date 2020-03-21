@@ -667,6 +667,18 @@ html {
     grid-template-columns: minmax(300px, 500px);
     padding: 0 20px;
   }
+
+  .camp-payment {
+    grid-template-columns: 1fr min-content 200px min-content 1fr;
+    grid-template-columns: 200px;
+    grid-template-rows: repeat(2, min-content);
+    grid-row-gap: 20px;
+    grid-template-areas: '. paypal . venmo .';
+    grid-template-areas: 
+    'paypal'
+    'venmo';
+    justify-content: center;
+  }
   
 }
 
