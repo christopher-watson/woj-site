@@ -1,12 +1,11 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import Navbar from "../components/Navbar"
-// import Nav2 from "../components/Nav2"
 import Home from "../components/Home"
 import Quote from "../components/Quote"
 import Image from "../components/Image"
 import About from "../components/About"
-import Trainers from "../components/Coaches"
+import Coaches from "../components/Coaches"
 import Camps from "../components/Camps"
 import Alumni from "../components/Alumni"
 import Social from "../components/Social"
@@ -23,7 +22,6 @@ function index() {
         <title>Clutch Sports</title>
       </Helmet>
       <Navbar />
-      {/* <Nav2 /> */}
       <Home />
       <div id="breakpoint"></div>
       <Quote by="Michael Jordan" right>
@@ -32,12 +30,10 @@ function index() {
       </Quote>
       <About />
       <Image src={lebron} alt="Lebron James" />
-      <Quote by="Lebron James">
-        Nothing is given. Everything is earned.”
-      </Quote>
-      <Trainers />
       <Camps />
-
+      <Image src={lebron} alt="Lebron James" />
+      <Quote by="Lebron James">Nothing is given. Everything is earned.”</Quote>
+      <Coaches />
       <Alumni />
       <Image src={lebron} alt="Lebron James" />
       <Quote by="Larry Bird" right>
@@ -47,7 +43,6 @@ function index() {
         You’ve got to have them down before you can even think about playing.
       </Quote>
       <Social />
-
       <Contact />
       <Quote by="Kobe Bryant" right>
         If you want to be a better player, you have to prepare, prepare, and
