@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { coaches } from "../../content/coachesContent"
 import { IoMdBasketball } from "react-icons/io"
 
-// use format below to add a new coach image
+// (1) use format below to add a new coach image (avoid using .JPEG images)
 import img1 from '../images/woj.png'
 import img2 from '../images/woj.png'
 import img3 from '../images/woj.png'
@@ -35,10 +35,10 @@ const CoachCard = props => {
 
 class Coaches extends Component {
   render() {
-    // add the image here as well
+    // (2) add the image here as well
     let images = [img1, img2, img3]
 
-    // do not touch any of the code below
+    // DO NOT TOUCH ANY OF THE CODE BELOW
     const allCoaches = coaches.info.map((item, index) => (
       <div key={index} className="coach-item">
         <CoachCard

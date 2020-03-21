@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Francois+One|Caveat|Montserrat|Yesteryear&display=swap');
-@import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
+@import url("https://fonts.googleapis.com/css?family=Francois+One|Caveat|Montserrat|Yesteryear&display=swap");
+@import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
 
 /* TEST BUFFER REMOVE LATER */
 .buffer {
@@ -14,9 +14,10 @@
   --white: #f7f7f7;
   --black: #252525;
   --lightBlack: #323232;
-  --lightGrey: #5D5D5D55;
-  --grey: #C9C9C9;
+  --lightGrey: #5d5d5d55;
+  --grey: #c9c9c9;
   --clear: #f7f7f700;
+  --green: #00b65c;
 }
 
 /* Global Style Reset */
@@ -48,12 +49,12 @@ html {
   position: relative;
   background: var(--lightGrey);
   padding: 75px 150px;
-  font-family: 'Caveat', cursive;
+  font-family: "Caveat", cursive;
   font-size: 3.3rem;
 }
 
 .quote-by {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
   margin-left: 20px;
 }
@@ -63,21 +64,21 @@ html {
 }
 
 .quotations {
-  font-family: 'Yesteryear', serif;
+  font-family: "Yesteryear", serif;
   font-size: 3rem;
 }
 
 .quote-logo {
   position: absolute;
   width: 200px;
-  opacity: .2;
+  opacity: 0.2;
   margin: 20px 40px;
   left: 0;
   top: 0;
   z-index: -1;
 }
 
-.quote-logo>img {
+.quote-logo > img {
   width: 100%;
 }
 
@@ -87,7 +88,7 @@ html {
   height: 50vh;
 }
 
-.jumbo-image>img {
+.jumbo-image > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -95,8 +96,8 @@ html {
 
 /* Section Titles */
 .section-title {
-  font-family: 'Francois One', Helvetica, sans-serif;
-  font-size: 2rem;
+  font-family: "Francois One", Helvetica, sans-serif;
+  font-size: 2.5rem;
   text-align: center;
   padding-bottom: 20px;
   text-decoration: underline;
@@ -121,7 +122,7 @@ html {
   color: var(--lightGrey) !important;
 }
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width: 500px) {
   .quote {
     padding: 60px 50px;
     font-size: 2.4rem;
@@ -141,12 +142,12 @@ html {
   position: fixed;
   display: grid;
   grid-template-columns: 300px 1fr;
-  grid-template-areas: 'logo nav-items';
+  grid-template-areas: "logo nav-items";
   height: 40px;
   width: 100vw;
   align-items: center;
   z-index: 1;
-  transition: background .6s ease;
+  transition: background 0.6s ease;
 }
 
 .logo-title {
@@ -157,7 +158,7 @@ html {
   align-items: center;
 }
 
-.logo>img {
+.logo > img {
   width: 25px;
   margin-left: 10px;
 }
@@ -185,21 +186,19 @@ html {
   /* visibility: hidden; */
 }
 
-
-
-@media only screen and (max-width:1100px) {
+@media only screen and (max-width: 1100px) {
   .nav {
     position: fixed;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 50px 1fr;
     grid-template-areas:
-      '.'
-      'logo'
-      'nav-items';
+      "."
+      "logo"
+      "nav-items";
     height: 100vh;
     justify-content: center;
     text-align: center;
-    transition: all .6s ease;
+    transition: all 0.6s ease;
     background: var(--black) !important;
   }
 
@@ -216,7 +215,7 @@ html {
 
   .hide-nav .anchor {
     /* opacity: 0; */
-    transition: all .5s ease;
+    transition: all 0.5s ease;
   }
 
   .logo-title {
@@ -261,7 +260,7 @@ html {
     height: 5px;
     width: 35px;
     background: var(--lightBlack);
-    content: '';
+    content: "";
   }
 
   #burger-toggle:before {
@@ -294,7 +293,6 @@ html {
   #burger-toggle.active:after {
     transform: rotate(-45deg);
   }
-
 }
 
 /* --------------------------------------------------------- HOME */
@@ -311,12 +309,12 @@ html {
   width: 100vw;
 }
 
-.bg-image>img {
+.bg-image > img {
   width: 100%;
   height: 100%;
   background: var(--black);
   object-fit: cover;
-  opacity: .2;
+  opacity: 0.2;
 }
 
 .home-content-div {
@@ -331,7 +329,7 @@ html {
 
 .home-text {
   color: var(--white);
-  font-family: 'Francois One', Helvetica, sans-serif;
+  font-family: "Francois One", Helvetica, sans-serif;
   font-size: 3.4rem;
   width: 450px;
   text-align: center;
@@ -354,13 +352,13 @@ html {
   border: 2px solid var(--white);
 }
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width: 500px) {
   .home-text {
     font-size: 2.7rem;
   }
 
   .home-content-div button {
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -383,7 +381,7 @@ html {
   margin-top: 20px;
 }
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width: 500px) {
   .about-content {
     padding: 0 50px;
   }
@@ -407,8 +405,8 @@ html {
 .coach-card {
   display: grid;
   grid-template-areas:
-    'photo name-bio'
-    'accolades accolades';
+    "photo name-bio"
+    "accolades accolades";
   grid-template-rows: repeat(2, auto);
   width: 500px;
   border-radius: 25px;
@@ -480,11 +478,9 @@ html {
     width: 100%;
     justify-content: center;
   }
-
 }
 
-
-@media only screen and (max-width:1100px) {
+@media only screen and (max-width: 1100px) {
   #coaches {
     padding: 50px 10px;
     display: flex;
@@ -502,13 +498,11 @@ html {
   .coach-card {
     display: grid;
     grid-template-areas:
-      'photo'
-      'name-bio'
-      'accolades';
+      "photo"
+      "name-bio"
+      "accolades";
     grid-template-rows: repeat(3, auto);
     width: 300px;
-    /* border-radius: 25px; */
-    /* box-shadow: 15px 20px 50px var(--lightGrey); */
     padding: 30px 20px;
     justify-content: center;
   }
@@ -530,25 +524,122 @@ html {
   }
 
   .coach-accolades {
-    /* grid-area: accolades; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* margin-top: 5px; */
-    /* height: 100%; */
-    justify-content: end;
+    justify-content: flex-end;
     padding: 0 30px 0 50px;
     padding: 0;
   }
 
   .accolade-item {
-    /* display: flex; */
-    /* height: 100%; */
     align-items: left;
     font-size: 1rem;
   }
 }
 
 /* --------------------------------------------------------- CAMPS */
+/* Camp Section Style */
+#camps {
+  padding: 50px 100px;
+}
+
+.camp-card-container {
+  padding: 60px 0;
+  border-radius: 25px;
+  background: var(--lightGrey);
+}
+
+.camp-card-inner {
+  display: grid;
+  grid-gap: 40px 20px;
+  grid-template-columns: repeat(3, 400px);
+  justify-content: space-evenly;
+}
+
+/* Camp Card Style */
+.camp-card {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: var(--white);
+  box-shadow: 15px 20px 50px var(--lightGrey);
+  border-radius: 5px;
+}
+
+.camp-padding {
+  padding: 10px 0;
+}
+
+.camp-card-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}
+
+.camp-name {
+  font-family: "Francois One", Helvetica, sans-serif;
+  font-size: 1.6rem;
+}
+
+.camp-description {
+  font-weight: bold;
+}
+
+.camp-button {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 10px;
+  margin: 5px 0 10px 0;
+  color: white;
+  background: var(--green);
+  border: 3px solid var(--lightGrey);
+  box-shadow: 2px 2px 5px var(--lightGrey);
+}
+
+.camp-button a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.camp-button:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 20px var(--lightGrey);
+  text-decoration: underline;
+}
+
+.camp-button:disabled {
+  cursor: initial;
+  opacity: .3;
+}
+
+.camp-button:disabled:hover {
+  box-shadow: 2px 2px 5px var(--lightGrey);
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1830px) {
+  .camp-card-inner {
+    grid-template-columns: 500px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  #camps {
+    padding: 50px 10px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .camp-card-inner {
+    grid-template-columns: minmax(300px, 500px);
+    padding: 0 20px;
+  }
+  
+}
 
 /* --------------------------------------------------------- ALUMNI */
 
