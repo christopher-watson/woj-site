@@ -7,7 +7,8 @@ export const camps = {
       description: "Camp 1 Description",
       date: "March 3-10",
       time: "10am-5pm",
-      link: "https://www.google.com",
+      link:
+        "https://docs.google.com/forms/d/e/1FAIpQLSfRwy7zvyYTesSCNwCoYoOOsTASEfPkxo18wnLE4Tno9oykdw/viewform?usp=sf_link",
       active: true,
     },
     // Camp 2
@@ -29,4 +30,8 @@ export const camps = {
       active: false,
     },
   ],
+  payment: {
+    paypal: "woj-paypal",
+    venmo: "woj-venmo",
+  },
 }

@@ -619,6 +619,35 @@ html {
   text-decoration: none;
 }
 
+/* Payment Icons */
+.camp-payment {
+  display: grid;
+  padding-top: 80px;
+  width: 100%;
+  grid-template-columns: 1fr min-content 200px min-content 1fr;
+  grid-template-rows: min-content;
+  grid-template-areas: '. paypal . venmo .';
+}
+
+.camp-payment-button {
+  display: flex;
+  width: 200px;
+  border-radius: 25px;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--white);
+  box-shadow: 2px 2px 5px var(--lightGrey);
+}
+
+.camp-paypal {
+  grid-area: paypal;
+}
+
+.camp-venmo {
+  grid-area: venmo;
+}
+
 @media only screen and (max-width: 1830px) {
   .camp-card-inner {
     grid-template-columns: 500px;
