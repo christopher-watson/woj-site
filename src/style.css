@@ -740,12 +740,14 @@ html {
   width: 200px;
   bottom: 15px;
   right: 15px;
-  opacity: .1;
+  opacity: 0.1;
 }
 
 @media only screen and (max-width: 1830px) {
   .alumni-card-container {
-    grid-template-columns: min-content;
+    grid-template-columns: 800px;
+    justify-content: center;
+    grid-gap: 40px 0;
   }
 }
 
@@ -754,9 +756,13 @@ html {
     padding: 50px 10px;
   }
 
+  .alumni-card-container {
+    grid-template-columns: 300px;
+  }
+  
   .alumni-card {
     grid-template-columns: 300px;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 300px 400px;
     height: 650px;
   }
 
@@ -774,7 +780,6 @@ html {
     left: 16%;
   }
 }
-
 
 /* --------------------------------------------------------- SOCIAL */
 #social {
