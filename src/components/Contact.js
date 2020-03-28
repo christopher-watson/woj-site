@@ -104,7 +104,7 @@ class Contact extends Component {
           name="Clutch Sports Contact Form"
           method="POST"
           netlify-honeypot="bot-field"
-          data-netlify-recaptcha="true"
+          // data-netlify-recaptcha="true"
           data-netlify="true"
           onSubmit={e => this.handleSubmit(e)}
         >
@@ -150,7 +150,7 @@ class Contact extends Component {
                 Send
               </button>
             ) : (
-              <button onClick={e => this.displayError()}>Send</button>
+              <button onClick={e => (e.preventDefault(), this.displayError())}>Send</button>
             )}
           </div>
           {this.state.formTextNecesary ? (
