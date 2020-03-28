@@ -26,6 +26,7 @@ class Contact extends Component {
   }
 
   handleSubmit = e => {
+    e.preventDefault()
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -38,14 +39,13 @@ class Contact extends Component {
     })
       .then(async () => {
         await alert("Success!")
-        await this.displaySuccess("YES")
+        await this.displaySuccess()
       })
       .catch(async error => {
         await alert(error)
         await this.displayError()
       })
 
-    e.preventDefault()
   }
 
   validateForm = () => {
@@ -64,7 +64,7 @@ class Contact extends Component {
     }
   }
 
-  displaySuccess = async e => {
+  displaySuccess = async() => {
     // await e.preventDefault()
     await console.log("SUCCESS")
     await this.setState({
@@ -110,7 +110,8 @@ class Contact extends Component {
         >
           <p className="hidden">
             <label>
-              Don’t fill this out if you're human: <input name="bot-field" name="form-name" value="Clutch Sports Contact Form" />
+              Don’t fill this out if you're human: <input type="hidden" name="form-name" value="Clutch Sports Contact Form" />
+              {/* Don’t fill this out if you're human: <input name="bot-field" name="form-name" value="Clutch Sports Contact Form" /> */}
             </label>
           </p>
           <p className="form-item">
