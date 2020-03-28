@@ -45,12 +45,12 @@ class Navbar extends Component {
 
   initialNavbar = () => {
     let nav = document.querySelector("nav")
-    let navClass = document.querySelector(".nav")
+    // let navClass = document.querySelector(".nav")
     let burger = document.querySelector("#burger-toggle")
     this.setState({
       navOpen: false,
     })
-    navClass.style.zIndex = -1;
+    // navClass.style.zIndex = -1;
     nav.className += " hide-nav"
     burger.className = ""
   }
