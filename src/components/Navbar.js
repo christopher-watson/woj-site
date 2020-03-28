@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import logo from "../images/gatsby-icon.png"
 
-class Nav2 extends Component {
+class Navbar extends Component {
   state = {
     navBg: false,
     navOpen: false,
@@ -9,7 +9,7 @@ class Nav2 extends Component {
 
   componentDidMount() {
     window.addEventListener("scroll", () => this.handleNavShowHide())
-    this.toggleNavbar()
+    this.initialNavbar()
   }
 
   handleNavShowHide = () => {
@@ -41,6 +41,16 @@ class Nav2 extends Component {
       behavior: "smooth",
     })
     this.toggleNavbar()
+  }
+
+  initialNavbar = () => {
+    let nav = document.querySelector("nav")
+    let burger = document.querySelector("#burger-toggle")
+    this.setState({
+      navOpen: false,
+    })
+    nav.className += " hide-nav"
+    burger.className = ""
   }
 
   toggleNavbar = () => {
@@ -134,4 +144,4 @@ class Nav2 extends Component {
   }
 }
 
-export default Nav2
+export default Navbar
