@@ -137,7 +137,6 @@ class Contact extends Component {
               onChange={this.handleInputChange}
             ></textarea>
           </p>
-          <div data-netlify-recaptcha="true"></div>
           <div className="form-submit-button">
             {this.state.validField ? (
               <button
