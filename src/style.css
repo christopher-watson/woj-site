@@ -888,7 +888,6 @@ html {
 }
 
 .error-text {
-  /* position: absolute; */
   display: flex;
   width: 100%;
   align-items: center;

@@ -1,11 +1,5 @@
 import React, { Component } from "react"
 
-function encode(data) {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&")
-}
-
 class Contact extends Component {
   state = {
     name: "",
@@ -25,28 +19,6 @@ class Contact extends Component {
     await this.validateForm()
   }
 
-  // handleSubmit = e => {
-  //   e.preventDefault()
-  //   fetch("/", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-  //     body: encode({
-  //       "form-name": "contact",
-  //       name: this.state.name,
-  //       email: this.state.email,
-  //       message: this.state.message,
-  //     }),
-  //   })
-  //     .then(async () => {
-  //       await alert("Success!")
-  //       await this.displaySuccess()
-  //     })
-  //     .catch(async error => {
-  //       await alert(error)
-  //       await this.displayError()
-  //     })
-  // }
-
   validateForm = () => {
     if (
       this.state.name.length > 0 &&
@@ -63,23 +35,24 @@ class Contact extends Component {
     }
   }
 
-  displaySuccess = async () => {
-    // await e.preventDefault()
-    await console.log("SUCCESS")
-    await this.setState({
-      name: "",
-      email: "",
-      message: "",
-      formTextNecesary: true,
-      formSuccess: true,
-    })
-    await setTimeout(() => {
-      this.setState({
-        formTextNecesary: false,
-        formSuccess: false,
-      })
-    }, 2000)
-  }
+  // No Longer In Use
+  // displaySuccess = async () => {
+  //   // await e.preventDefault()
+  //   await console.log("SUCCESS")
+  //   await this.setState({
+  //     name: "",
+  //     email: "",
+  //     message: "",
+  //     formTextNecesary: true,
+  //     formSuccess: true,
+  //   })
+  //   await setTimeout(() => {
+  //     this.setState({
+  //       formTextNecesary: false,
+  //       formSuccess: false,
+  //     })
+  //   }, 2000)
+  // }
 
   displayError = async () => {
     await this.setState({
@@ -104,7 +77,6 @@ class Contact extends Component {
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           className="contact-form"
-          // onSubmit={e => handleSubmit(e)}
         >
           <input type="hidden" name="bot-field" />
           <input
@@ -143,7 +115,6 @@ class Contact extends Component {
               <button
                 className="valid-button"
                 type="submit"
-                // onClick={e => this.displaySuccess(e)}
               >
                 Send
               </button>
