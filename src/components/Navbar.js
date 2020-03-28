@@ -55,18 +55,18 @@ class Navbar extends Component {
     burger.className = ""
   }
   
-  toggleNavbar = () => {
+  toggleNavbar = async() => {
     let nav = document.querySelector("nav")
     let burger = document.querySelector("#burger-toggle")
     // let navClass = document.querySelector(".nav")
     // navClass.style.zIndex = 1;
-    this.setState({
+    await this.setState({
       navOpen: !this.state.navOpen,
     })
-    this.state.navOpen
+    await this.state.navOpen
     ? (nav.className += " show-nav")
     : (nav.className = "nav")
-    this.state.navOpen
+    await this.state.navOpen
       ? (burger.className += "active")
       : (burger.className = "")
   }
