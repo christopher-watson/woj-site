@@ -887,14 +887,8 @@ html {
   cursor: pointer;
 }
 
-.form-feedback {
-  height: 20px;
-  position: relative;
-}
-
-.error-text,
-.success-text {
-  position: absolute;
+.error-text {
+  /* position: absolute; */
   display: flex;
   width: 100%;
   align-items: center;
@@ -902,24 +896,16 @@ html {
 }
 
 .error {
+  height: 5px;
+  margin-top: 20px;
   visibility: hidden;
 }
 
 .error-visible {
-  font-weight: bold;
+  height: 5px;
   margin-top: 20px;
+  font-weight: bold;
   color: #EE0000;
-  visibility: initial;
-}
-
-.success {
-  visibility: hidden;
-}
-
-.success-visible {
-  font-weight: bold;
-  margin-top: 20px;
-  color: var(--green);
   visibility: initial;
 }
 
