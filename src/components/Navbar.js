@@ -9,7 +9,7 @@ class Navbar extends Component {
 
   componentDidMount() {
     window.addEventListener("scroll", () => this.handleNavShowHide())
-    this.initialNavbar()
+    // this.initialNavbar()
   }
 
   handleNavShowHide = () => {
@@ -44,28 +44,28 @@ class Navbar extends Component {
   }
 
   initialNavbar = () => {
-    let nav = document.querySelector("nav")
+    // let nav = document.querySelector("nav")
     // let navClass = document.querySelector(".nav")
     let burger = document.querySelector("#burger-toggle")
     this.setState({
       navOpen: false,
     })
     // navClass.style.zIndex = -1;
-    nav.className += " hide-nav"
+    // nav.className += "nav"
     burger.className = ""
   }
   
   toggleNavbar = () => {
     let nav = document.querySelector("nav")
     let burger = document.querySelector("#burger-toggle")
-    let navClass = document.querySelector(".nav")
-    navClass.style.zIndex = 1;
+    // let navClass = document.querySelector(".nav")
+    // navClass.style.zIndex = 1;
     this.setState({
       navOpen: !this.state.navOpen,
     })
     this.state.navOpen
-      ? (nav.className = "nav")
-      : (nav.className += " hide-nav")
+    ? (nav.className += " show-nav")
+    : (nav.className = "nav")
     this.state.navOpen
       ? (burger.className += "active")
       : (burger.className = "")
@@ -75,7 +75,7 @@ class Navbar extends Component {
     return (
       <div className="nav-container">
         <div className="hamburger" onClick={() => this.toggleNavbar()}>
-          <span id="burger-toggle"></span>
+          <span id="burger-toggle" className=""></span>
         </div>
         <nav
           className="nav"
