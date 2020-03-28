@@ -45,7 +45,6 @@ class Contact extends Component {
         await alert(error)
         await this.displayError()
       })
-
   }
 
   validateForm = () => {
@@ -64,8 +63,8 @@ class Contact extends Component {
     }
   }
 
-  displaySuccess = async() => {
-    // await e.preventDefault()
+  displaySuccess = async e => {
+    await e.preventDefault()
     await console.log("SUCCESS")
     await this.setState({
       name: "",
@@ -100,17 +99,23 @@ class Contact extends Component {
       <div id="contact">
         <div className="section-title">Contact Us</div>
         <form
-          className="contact-form"
-          name="Clutch Sports Contact Form"
+          name="Clutch Sports Contact Form v2"
           method="POST"
-          netlify-honeypot="bot-field"
-          // data-netlify-recaptcha="true"
           data-netlify="true"
-          onSubmit={e => this.handleSubmit(e)}
+          data-netlify-honeypot="bot-field"
+          className="contact-form"
+          // data-netlify-recaptcha="true"
+          // onSubmit={e => this.handleSubmit(e)}
         >
           <p className="hidden">
             <label>
-              Don’t fill this out if you're human: <input type="hidden" name="form-name" value="Clutch Sports Contact Form" />
+              Don’t fill these out if you're human:
+              <input
+                type="hidden"
+                name="form-name"
+                value="Clutch Sports Contact Form v2"
+              />
+              <input type="hidden" name="bot-field" />
               {/* Don’t fill this out if you're human: <input name="bot-field" name="form-name" value="Clutch Sports Contact Form" /> */}
             </label>
           </p>
@@ -145,12 +150,14 @@ class Contact extends Component {
               <button
                 className="valid-button"
                 type="submit"
-                // onClick={e => this.displaySuccess(e)}
+                onClick={e => this.displaySuccess(e)}
               >
                 Send
               </button>
             ) : (
-              <button onClick={e => (e.preventDefault(), this.displayError())}>Send</button>
+              <button onClick={e => (e.preventDefault(), this.displayError())}>
+                Send
+              </button>
             )}
           </div>
           {this.state.formTextNecesary ? (
