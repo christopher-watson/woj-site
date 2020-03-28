@@ -5,7 +5,7 @@ const styles = {
     display: "grid",
     gridTemplateColumns: "1fr 2fr",
     gridTemplateAreas: "img handle",
-    width: "350px",
+    width: "325px",
     border: "5px solid #323232",
     borderRadius: "15px",
     margin: "5px 0",
