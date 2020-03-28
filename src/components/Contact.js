@@ -95,27 +95,6 @@ class Contact extends Component {
   }
 
   render() {
-    // const handleSubmit = e => {
-    //   e.preventDefault()
-    //   fetch("/", {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //     body: encode({
-    //       "form-name": "contact",
-    //       name: this.state.name,
-    //       email: this.state.email,
-    //       message: this.state.message,
-    //     }),
-    //   })
-    //     .then(async () => {
-    //       await alert("Success!")
-    //       await this.displaySuccess()
-    //     })
-    //     .catch(async error => {
-    //       await alert(error)
-    //       await this.displayError()
-    //     })
-    // }
     return (
       <div id="contact">
         <div className="section-title">Contact Us</div>
@@ -125,15 +104,8 @@ class Contact extends Component {
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           className="contact-form"
-          // data-netlify-recaptcha="true"
           // onSubmit={e => handleSubmit(e)}
         >
-          {/* <p className="hidden"> */}
-          {/* <label> */}
-          {/* Don’t fill these out if you're human: */}
-          {/* Don’t fill this out if you're human: <input name="bot-field" name="form-name" value="Clutch Sports Contact Form" /> */}
-          {/* </label> */}
-          {/* </p> */}
           <input type="hidden" name="bot-field" />
           <input
             type="hidden"
@@ -181,30 +153,13 @@ class Contact extends Component {
               </button>
             )}
           </div>
-          {this.state.formTextNecesary ? (
-            <div className="form-feedback">
-              <div className="error-text">
-                {this.state.formError ? (
-                  <div className="error-visible">
-                    Please Fill Out Entire Form
-                  </div>
-                ) : (
-                  <div className="error"></div>
-                )}
-              </div>
-              <div className="success-text">
-                {this.state.formSuccess ? (
-                  <div className="success-visible">
-                    Your Message Has Been Sent!
-                  </div>
-                ) : (
-                  <div className="success"></div>
-                )}
-              </div>
-            </div>
-          ) : (
-            <div className="form-feedback"></div>
-          )}
+          <div className="error-text">
+            {this.state.formError ? (
+              <div className="error-visible">Please Fill Out Entire Form</div>
+            ) : (
+              <div className="error"></div>
+            )}
+          </div>
         </form>
       </div>
     )
