@@ -15,7 +15,7 @@ const styles = {
 
 const SocialCTA = props => {
   return (
-    <div style={styles.card}>
+    <div className="social-cta" style={styles.card}>
       <div
         style={{
           display: "flex",

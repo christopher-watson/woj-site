@@ -3,7 +3,7 @@ import logo from "../images/gatsby-icon.png"
 
 const Quote = props => {
   return (
-    <div className={props.right ? "quote quote-right" : "quote quote-left"}>
+    <div className={props.left ? "quote quote-left" : "quote quote-right"}>
       <span className="quotations">"</span>
       {props.children}
       <span className="quotations"> "</span>

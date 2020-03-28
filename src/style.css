@@ -1,13 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Francois+One|Caveat|Montserrat|Yesteryear&display=swap");
 @import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
 
-/* TEST BUFFER REMOVE LATER */
-.buffer {
-  padding: 50px 0;
-  border-top: 1px solid red;
-  border-bottom: 1px solid red;
-}
-
 /* --------------------------------------------------------- GLOBAL STYLING */
 /* Root Site Colors */
 :root {
@@ -340,11 +333,12 @@ html {
 
 .home-content-div button {
   font-size: 1rem;
-  padding: 5px 10px;
+  padding: 10px 15px;
   border-radius: 10px;
   margin: 10px 10px 0 10px;
   border: 2px solid var(--lightBlack);
   background: var(--white);
+  transition: border 1.2s ease;
 }
 
 .home-content-div button:hover {
@@ -543,8 +537,8 @@ html {
 
 .camp-card-container {
   padding: 60px 0;
-  border-radius: 25px;
-  background: var(--lightGrey);
+  /* border-radius: 25px; */
+  /* background: var(--lightGrey); */
 }
 
 .camp-card-inner {
@@ -592,10 +586,11 @@ html {
   font-weight: 600;
   border-radius: 10px;
   margin: 5px 0 10px 0;
-  color: white;
+  color: var(--white);
   background: var(--green);
   border: 3px solid var(--lightGrey);
   box-shadow: 2px 2px 5px var(--lightGrey);
+  transition: box-shadow 1.2s ease;
 }
 
 .camp-button a {
@@ -759,7 +754,7 @@ html {
   .alumni-card-container {
     grid-template-columns: 300px;
   }
-  
+
   .alumni-card {
     grid-template-columns: 300px;
     grid-template-rows: 300px 400px;
@@ -797,6 +792,14 @@ html {
   justify-content: center;
 }
 
+.social-cta {
+  box-shadow: 2px 2px 5px var(--lightGrey);
+}
+
+.hover-social {
+  transition: background 1.2s ease;
+}
+
 .hover-social:hover {
   background: var(--grey) !important;
 }
@@ -813,6 +816,122 @@ html {
 }
 
 /* --------------------------------------------------------- CONTACT */
+#contact {
+  display: flex;
+  padding: 50px;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form {
+  width: 400px;
+}
+
+.hidden {
+  height: 0;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden;
+}
+
+.form-item {
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 0 10px var(--grey);
+}
+
+.form-item input,
+.form-item textarea {
+  border: none;
+  width: 100%;
+  font-size: 1rem;
+  padding: 2px 0 ;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.form-item input::placeholder,
+.form-item textarea::placeholder{
+  color: var(--grey);
+  font-weight: bold;
+}
+
+.form-item textarea {
+  resize: none;
+  height: 100px;
+}
+
+.form-submit-button {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-submit-button button {
+  background: var(--white);
+  box-shadow: 0 0 10px var(--grey);
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 10px;
+  margin: 5px 0;
+  border: 3px solid var(--lightGrey);
+  transition: background 1s ease;
+}
+
+.valid-button {
+  background: var(--green) !important;
+  cursor: pointer;
+}
+
+.form-feedback {
+  height: 20px;
+  position: relative;
+}
+
+.error-text,
+.success-text {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.error {
+  visibility: hidden;
+}
+
+.error-visible {
+  font-weight: bold;
+  margin-top: 20px;
+  color: #EE0000;
+  visibility: initial;
+}
+
+.success {
+  visibility: hidden;
+}
+
+.success-visible {
+  font-weight: bold;
+  margin-top: 20px;
+  color: var(--green);
+  visibility: initial;
+}
+
+@media only screen and (max-width: 1100px) {
+  #contact {
+    padding: 50px 10px;
+  }
+  
+  .contact-form {
+    width: 300px;
+  }
+}
 
 /* --------------------------------------------------------- FOOTER */
 footer {
