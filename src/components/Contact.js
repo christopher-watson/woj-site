@@ -1,12 +1,10 @@
 import React, { Component } from "react"
 
-
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&")
 }
-
 
 class Contact extends Component {
   state = {
@@ -40,7 +38,7 @@ class Contact extends Component {
     })
       .then(async () => {
         await alert("Success!")
-        await this.displaySuccess()
+        await this.displaySuccess("YES")
       })
       .catch(async error => {
         await alert(error)
@@ -66,9 +64,13 @@ class Contact extends Component {
     }
   }
 
-  displaySuccess = async () => {
-    console.log("SUCCESS")
+  displaySuccess = async e => {
+    // await e.preventDefault()
+    await console.log("SUCCESS")
     await this.setState({
+      name: "",
+      email: "",
+      message: "",
       formTextNecesary: true,
       formSuccess: true,
     })
@@ -108,7 +110,7 @@ class Contact extends Component {
         >
           <p className="hidden">
             <label>
-              Don’t fill this out if you're human: <input name="bot-field" />
+              Don’t fill this out if you're human: <input name="bot-field" name="form-name" value="Clutch Sports Contact Form" />
             </label>
           </p>
           <p className="form-item">
@@ -147,9 +149,7 @@ class Contact extends Component {
                 Send
               </button>
             ) : (
-              <button 
-              onClick={e => this.displayError(e)}
-              >Send</button>
+              <button onClick={e => this.displayError()}>Send</button>
             )}
           </div>
           {this.state.formTextNecesary ? (
