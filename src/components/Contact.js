@@ -38,9 +38,9 @@ class Contact extends Component {
         message: this.state.message,
       }),
     })
-      .then(() => {
-        alert("Success!")
-        this.displaySuccess()
+      .then(async () => {
+        await alert("Success!")
+        await this.displaySuccess()
       })
       .catch(async error => {
         await alert(error)
@@ -66,23 +66,7 @@ class Contact extends Component {
     }
   }
 
-  displayError = async e => {
-    e.preventDefault()
-    console.log("ERROR")
-    await this.setState({
-      formTextNecesary: true,
-      formError: true,
-    })
-    await setTimeout(() => {
-      this.setState({
-        formTextNecesary: false,
-        formError: false,
-      })
-    }, 2000)
-  }
-
-  displaySuccess = async e => {
-    e.preventDefault()
+  displaySuccess = async () => {
     console.log("SUCCESS")
     await this.setState({
       formTextNecesary: true,
@@ -92,6 +76,19 @@ class Contact extends Component {
       this.setState({
         formTextNecesary: false,
         formSuccess: false,
+      })
+    }, 2000)
+  }
+
+  displayError = async () => {
+    await this.setState({
+      formTextNecesary: true,
+      formError: true,
+    })
+    await setTimeout(() => {
+      this.setState({
+        formTextNecesary: false,
+        formError: false,
       })
     }, 2000)
   }
@@ -107,7 +104,7 @@ class Contact extends Component {
           netlify-honeypot="bot-field"
           data-netlify-recaptcha="true"
           data-netlify="true"
-          onSubmit={this.handleSubmit}
+          onSubmit={e => this.handleSubmit(e)}
         >
           <p className="hidden">
             <label>
