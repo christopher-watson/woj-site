@@ -24,7 +24,7 @@ function index() {
       <Navbar />
       <Home />
       <div id="breakpoint"></div>
-      <Quote by="Michael Jordan" right>
+      <Quote by="Michael Jordan">
         My attitude is that if you push me towards something that you think is a
         weakness, then I will turn that perceived weakness into a strength.
       </Quote>
@@ -36,7 +36,7 @@ function index() {
       <Coaches />
       <Alumni />
       <Image src={lebron} alt="Lebron James" />
-      <Quote by="Larry Bird" right>
+      <Quote by="Larry Bird">
         Practice habits were crucial to my development in basketball. I didn’t
         play against the toughest competition in high school, but one reason I
         was able to do well in college was that I mastered the fundamentals.
@@ -44,7 +44,7 @@ function index() {
       </Quote>
       <Social />
       <Contact />
-      <Quote by="Kobe Bryant" right>
+      <Quote by="Kobe Bryant">
         If you want to be a better player, you have to prepare, prepare, and
         prepare some more.
       </Quote>
