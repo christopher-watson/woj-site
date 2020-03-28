@@ -200,7 +200,7 @@ html {
   }
   
   .show-nav {
-    height: 100vh;
+    height: 100vh !important;
     transition: all 0.6s ease;
   }
 
