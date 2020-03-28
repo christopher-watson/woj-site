@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 
-const encode = data => {
+function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&")
@@ -25,27 +25,27 @@ class Contact extends Component {
     await this.validateForm()
   }
 
-  handleSubmit = e => {
-    e.preventDefault()
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": "contact",
-        name: this.state.name,
-        email: this.state.email,
-        message: this.state.message,
-      }),
-    })
-      .then(async () => {
-        await alert("Success!")
-        await this.displaySuccess()
-      })
-      .catch(async error => {
-        await alert(error)
-        await this.displayError()
-      })
-  }
+  // handleSubmit = e => {
+  //   e.preventDefault()
+  //   fetch("/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //     body: encode({
+  //       "form-name": "contact",
+  //       name: this.state.name,
+  //       email: this.state.email,
+  //       message: this.state.message,
+  //     }),
+  //   })
+  //     .then(async () => {
+  //       await alert("Success!")
+  //       await this.displaySuccess()
+  //     })
+  //     .catch(async error => {
+  //       await alert(error)
+  //       await this.displayError()
+  //     })
+  // }
 
   validateForm = () => {
     if (
@@ -63,8 +63,8 @@ class Contact extends Component {
     }
   }
 
-  displaySuccess = async e => {
-    await e.preventDefault()
+  displaySuccess = async() => {
+    // await e.preventDefault()
     await console.log("SUCCESS")
     await this.setState({
       name: "",
@@ -95,6 +95,27 @@ class Contact extends Component {
   }
 
   render() {
+    const handleSubmit = e => {
+      e.preventDefault()
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": "contact",
+          name: this.state.name,
+          email: this.state.email,
+          message: this.state.message,
+        }),
+      })
+        .then(async () => {
+          await alert("Success!")
+          await this.displaySuccess()
+        })
+        .catch(async error => {
+          await alert(error)
+          await this.displayError()
+        })
+    }
     return (
       <div id="contact">
         <div className="section-title">Contact Us</div>
@@ -105,7 +126,7 @@ class Contact extends Component {
           data-netlify-honeypot="bot-field"
           className="contact-form"
           // data-netlify-recaptcha="true"
-          // onSubmit={e => this.handleSubmit(e)}
+          onSubmit={e => handleSubmit(e)}
         >
           <p className="hidden">
             <label>
@@ -150,7 +171,7 @@ class Contact extends Component {
               <button
                 className="valid-button"
                 type="submit"
-                onClick={e => this.displaySuccess(e)}
+                // onClick={e => this.displaySuccess(e)}
               >
                 Send
               </button>
