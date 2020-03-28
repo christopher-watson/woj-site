@@ -813,8 +813,8 @@ html {
   }
 
   .social-content {
-    grid-gap: 10px 20px;
-    grid-template-columns: 350px;
+    grid-gap: 10px;
+    grid-template-columns: 325px;
   }
 }
 
