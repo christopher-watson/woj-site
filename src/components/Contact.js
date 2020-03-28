@@ -63,7 +63,7 @@ class Contact extends Component {
     }
   }
 
-  displaySuccess = async() => {
+  displaySuccess = async () => {
     // await e.preventDefault()
     await console.log("SUCCESS")
     await this.setState({
@@ -95,27 +95,27 @@ class Contact extends Component {
   }
 
   render() {
-    const handleSubmit = e => {
-      e.preventDefault()
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({
-          "form-name": "contact",
-          name: this.state.name,
-          email: this.state.email,
-          message: this.state.message,
-        }),
-      })
-        .then(async () => {
-          await alert("Success!")
-          await this.displaySuccess()
-        })
-        .catch(async error => {
-          await alert(error)
-          await this.displayError()
-        })
-    }
+    // const handleSubmit = e => {
+    //   e.preventDefault()
+    //   fetch("/", {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //     body: encode({
+    //       "form-name": "contact",
+    //       name: this.state.name,
+    //       email: this.state.email,
+    //       message: this.state.message,
+    //     }),
+    //   })
+    //     .then(async () => {
+    //       await alert("Success!")
+    //       await this.displaySuccess()
+    //     })
+    //     .catch(async error => {
+    //       await alert(error)
+    //       await this.displayError()
+    //     })
+    // }
     return (
       <div id="contact">
         <div className="section-title">Contact Us</div>
@@ -126,20 +126,20 @@ class Contact extends Component {
           data-netlify-honeypot="bot-field"
           className="contact-form"
           // data-netlify-recaptcha="true"
-          onSubmit={e => handleSubmit(e)}
+          // onSubmit={e => handleSubmit(e)}
         >
-          <p className="hidden">
-            <label>
-              Don’t fill these out if you're human:
-              <input
-                type="hidden"
-                name="form-name"
-                value="Clutch Sports Contact Form v2"
-              />
-              <input type="hidden" name="bot-field" />
-              {/* Don’t fill this out if you're human: <input name="bot-field" name="form-name" value="Clutch Sports Contact Form" /> */}
-            </label>
-          </p>
+          {/* <p className="hidden"> */}
+          {/* <label> */}
+          {/* Don’t fill these out if you're human: */}
+          {/* Don’t fill this out if you're human: <input name="bot-field" name="form-name" value="Clutch Sports Contact Form" /> */}
+          {/* </label> */}
+          {/* </p> */}
+          <input type="hidden" name="bot-field" />
+          <input
+            type="hidden"
+            name="form-name"
+            value="Clutch Sports Contact Form v2"
+          />
           <p className="form-item">
             <input
               type="text"
