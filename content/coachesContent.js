@@ -4,11 +4,11 @@ export const coaches = {
     // coach 1
     {
       name: "John Wojcik",
-      bio: "The greatest coach in the world. Potenti eget taciti platea montes praesent ante tristique euismod lobortis",
+      bio: "Sayreville War Memorial HS Boys Basketball Head Coach",
       accolades: [
-        "2x Former GMC Coach of the Year",
-        "Former Division 3 National Champion",
-        "SWMHS All Time Record for Most Wins",
+        " Collegiate Assistant Coach Ramapo College of NJ",
+        " Player Ramapo College of NJ",
+        " GMC Coach of the Year ",
       ],
     },
 
