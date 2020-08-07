@@ -2,7 +2,12 @@ import React from "react"
 
 const Paypal = props => {
   return (
-    <div className="camp-payment-button camp-paypal">
+    <a
+      href={props.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="camp-payment-button camp-paypal"
+    >
       <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64">
         <g transform="matrix(.123006 0 0 .123006 -29.423026 -14.127235)">
           <path
@@ -24,7 +29,7 @@ const Paypal = props => {
         </g>
       </svg>
       {props.details}
-    </div>
+    </a>
   )
 }
 

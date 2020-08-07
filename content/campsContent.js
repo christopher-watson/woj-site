@@ -39,7 +39,7 @@ export const camps = {
     },
   ],
   payment: {
-    paypal: "woj-paypal",
-    venmo: "woj-venmo",
+    paypalDesc: "Clutch Sports Paypal",
+    paypalLink: "https://www.paypal.me/clutchsportsllc",
   },
 }

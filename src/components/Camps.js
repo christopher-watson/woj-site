@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { camps } from "../../content/campsContent"
-import Venmo from "./Venmo"
+// import Venmo from "./Venmo"
 import Paypal from "./Paypal"
 
 import img1 from "../images/clutchcamp.jpg"
@@ -55,8 +55,8 @@ class Camps extends Component {
         <div className="camp-card-container">
           <div className="camp-card-inner">{allCamps}</div>
           <div className="camp-payment">
-            <Paypal details={camps.payment.paypal} />
-            <Venmo details={camps.payment.venmo} />
+            <Paypal details={camps.payment.paypalDesc} link={camps.payment.paypalLink}/>
+            {/* <Venmo details={camps.payment.venmo} /> */}
           </div>
         </div>
       </div>
