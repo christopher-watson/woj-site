@@ -4,7 +4,7 @@ export const socialMedia = {
     {
       image: "fab fa-facebook-square",
       name: "Facebook",
-      link: "https://facebook.com/clutchsportsnj",
+      link: "https://www.facebook.com/Clutchsportsnj/",
       handle: "clutchsportnj",
       color: "#3A5A98",
     },

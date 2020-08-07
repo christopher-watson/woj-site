@@ -3,30 +3,38 @@ export const camps = {
   info: [
     // Camp 1
     {
-      name: "Camp 1",
-      description: "Camp 1 Description",
-      date: "March 3-10",
-      time: "10am-5pm",
-      link:
-        "https://docs.google.com/forms/d/e/1FAIpQLSfRwy7zvyYTesSCNwCoYoOOsTASEfPkxo18wnLE4Tno9oykdw/viewform?usp=sf_link",
-      active: true,
+      name: "Spring Skill Sessions 2021",
+      description: "Coming Soon",
+      date: "Spring 2021",
+      time: "TBD",
+      link: "#",
+      active: false,
     },
     // Camp 2
     {
-      name: "Camp 2",
-      description: "Camp 2 Description",
-      date: "March 3-10",
-      time: "10am-5pm",
-      link: "https://www.google.com",
+      name: "Summer Camp 1 2021",
+      description: "Coming Soon",
+      date: "Summer 2021",
+      time: "TBD",
+      link: "#",
       active: false,
     },
     // Camp 3
     {
-      name: "Camp 3",
-      description: "Camp 3 Description",
-      date: "March 3-10",
-      time: "10am-5pm",
-      link: "https://www.google.com",
+      name: "Summer Camp 2 2021",
+      description: "Coming Soon",
+      date: "Summer 2021",
+      time: "TBD",
+      link: "#",
+      active: false,
+    },
+    // Camp 4
+    {
+      name: "Summer Camp 3 2021",
+      description: "Coming Soon",
+      date: "Summer 2021",
+      time: "TBD",
+      link: "#",
       active: false,
     },
   ],

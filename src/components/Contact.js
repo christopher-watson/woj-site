@@ -35,25 +35,6 @@ class Contact extends Component {
     }
   }
 
-  // No Longer In Use
-  // displaySuccess = async () => {
-  //   // await e.preventDefault()
-  //   await console.log("SUCCESS")
-  //   await this.setState({
-  //     name: "",
-  //     email: "",
-  //     message: "",
-  //     formTextNecesary: true,
-  //     formSuccess: true,
-  //   })
-  //   await setTimeout(() => {
-  //     this.setState({
-  //       formTextNecesary: false,
-  //       formSuccess: false,
-  //     })
-  //   }, 2000)
-  // }
-
   displayError = async () => {
     await this.setState({
       formTextNecesary: true,
@@ -112,14 +93,16 @@ class Contact extends Component {
           </p>
           <div className="form-submit-button">
             {this.state.validField ? (
-              <button
-                className="valid-button"
-                type="submit"
-              >
+              <button className="valid-button" type="submit">
                 Send
               </button>
             ) : (
-              <button onClick={e => (e.preventDefault(), this.displayError())}>
+              <button
+                onClick={e => {
+                  e.preventDefault()
+                  this.displayError()
+                }}
+              >
                 Send
               </button>
             )}
