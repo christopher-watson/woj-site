@@ -5,7 +5,7 @@ export const alumni = {
     {
       name: "Corey Taite",
       title: "Professional Baksetball Player",
-      status: "Tri State Admirals",
+      status: "Hrunamenn (Iceland)",
       testimonial:
         "\"Nibh etiam justo diam congue amet luctus integer nulla sem. Adipiscing eu vivamus enim montes sociis tempus dui massa diam cras amet commodo integer nascetur\"",
     },
@@ -13,7 +13,7 @@ export const alumni = {
     {
       name: "Jehyve Floyd",
       title: "Professional Baksetball Player",
-      status: "Larisa BC (Greece)",
+      status: "Promitheas (Greece)",
       testimonial:
         "\"Nibh etiam justo diam congue amet luctus integer nulla sem. Adipiscing eu vivamus enim montes sociis tempus dui massa diam cras amet commodo integer nascetur\"",
     },
