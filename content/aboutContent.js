@@ -1,5 +1,4 @@
 export const about = {
   title: "About Us",
-  text:
-    " Basketball Training ",
+  text: " The Premire Standard in Basketball Training ",
 }

@@ -4,8 +4,7 @@ import { IoMdBasketball } from "react-icons/io"
 
 // (1) use format below to add a new coach image (avoid using .JPEG images)
 import img1 from '../images/woj.png'
-import img2 from '../images/woj.png'
-import img3 from '../images/woj.png'
+import img2 from '../images/watson.jpg'
 
 const CoachCard = props => {
   return (
@@ -36,7 +35,7 @@ const CoachCard = props => {
 class Coaches extends Component {
   render() {
     // (2) add the image here as well
-    let images = [img1, img2, img3]
+    let images = [img1, img2]
 
     // DO NOT TOUCH ANY OF THE CODE BELOW
     const allCoaches = coaches.info.map((item, index) => (

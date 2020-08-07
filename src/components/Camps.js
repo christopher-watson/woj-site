@@ -34,7 +34,7 @@ const CampCard = props => {
 
 class Camps extends Component {
   render() {
-    let images = [img1, img2, img3]
+    let images = [img1, img2, img3, img3]
 
     const allCamps = camps.info.map((item, index) => (
       <div key={index} className="camp-item">

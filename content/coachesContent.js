@@ -4,35 +4,37 @@ export const coaches = {
     // coach 1
     {
       name: "John Wojcik",
-      bio: "The greatest coach in the world. Potenti eget taciti platea montes praesent ante tristique euismod lobortis",
+      bio: "Owner of Clutch Sports. Current Sayreville Boys Basketball Head Coach.",
       accolades: [
-        "2x Former GMC Coach of the Year",
-        "Former Division 3 National Champion",
-        "SWMHS All Time Record for Most Wins",
+        "2013-14 GMC Coach of the Year",
+        "4x GMC White Division Champion (Coach)",
+        "Ramapo College Athletic Hall of Fame Inductee (Player)",
+        "2x NJAC Conference Champion (Player)",
+        "SWMHS Alumni",
       ],
     },
 
     // coach 2
     {
-      name: "David Langan",
-      bio: "Vel consequat inceptos elit quam mus ultrices eros mi viverra",
+      name: "Christopher Watson",
+      bio: "Coach at Clutch Sports. Current Sayreville Boys Basketball Assistant Coach",
       accolades: [
-        "Former Division 3 All American",
-        "Former Division 3 Asst Coach",
+        "Former Division 2 Athlete",
+        "7+ Years of coaching experience",
         "SWMHS Alumni",
       ],
     },
     
-    // coach 3
-    {
-      name: "David Langan",
-      bio: "Vel consequat inceptos elit quam mus ultrices eros mi viverra",
-      accolades: [
-        "Former Division 3 All American",
-        "Former Division 3 Asst Coach",
-        "SWMHS Alumni",
-      ],
-    },
+    // // coach 3
+    // {
+    //   name: "David Langan",
+    //   bio: "Vel consequat inceptos elit quam mus ultrices eros mi viverra",
+    //   accolades: [
+    //     "Former Division 3 All American",
+    //     "Former Division 3 Asst Coach",
+    //     "SWMHS Alumni",
+    //   ],
+    // },
 
     //coach 3
   ],
