@@ -11,7 +11,7 @@ const Icons = props => {
       <div className="icon">
         <a
           style={props.light ? { color: "var(--white)" } : {}}
-          href="https://facebook.com/"
+          href="https://www.facebook.com/Clutchsportsnj/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -21,7 +21,7 @@ const Icons = props => {
       <div className="icon">
         <a
           style={props.light ? { color: "var(--white)" } : {}}
-          href="https://twitter.com/"
+          href="https://twitter.com/clutchsportsnj"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -31,7 +31,7 @@ const Icons = props => {
       <div className="icon">
         <a
           style={props.light ? { color: "var(--white)" } : {}}
-          href="https://instagram.com/"
+          href="https://instagram.com/clutchsportsnj"
           target="_blank"
           rel="noopener noreferrer"
         >
