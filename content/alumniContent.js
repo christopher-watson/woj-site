@@ -7,7 +7,7 @@ export const alumni = {
       title: "Professional Baksetball Player",
       status: "Hrunamenn (Iceland)",
       testimonial:
-        "\"Nibh etiam justo diam congue amet luctus integer nulla sem. Adipiscing eu vivamus enim montes sociis tempus dui massa diam cras amet commodo integer nascetur\"",
+        '"Coach Woj believed in me and believed in the beauty of the game not the politics. The knowledge and skills I’ve acquired under his tutelage has helped me reach my goals of becoming a professional basketball player.  I’m forever appreciative!"',
     },
     // alum 2
     {
@@ -15,7 +15,7 @@ export const alumni = {
       title: "Professional Baksetball Player",
       status: "Promitheas (Greece)",
       testimonial:
-        "\"Nibh etiam justo diam congue amet luctus integer nulla sem. Adipiscing eu vivamus enim montes sociis tempus dui massa diam cras amet commodo integer nascetur\"",
+        '"Coach Woj has been a tremendous help in my growth on and off the basketball court. He saw potential in me the early stages of my career and I haven’t look back since. As a Professional now, I’m grateful for my time playing for Coach Woj. He instilled the importance of hard work and determination. I was able to grow under him because of the constant motivation. I’m grateful for his leadership and inspiration to make a difference."',
     },
   ],
 }
